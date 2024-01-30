@@ -29,7 +29,11 @@ body {
     left:50%;
     margin-left:550px;
     margin-top:240px;
-    /* position:absolute; */
     text-align:center;
     top:50%;
 } 
+
+audio{
+    margin-left:780px;
+    margin-top:40px;
+}
