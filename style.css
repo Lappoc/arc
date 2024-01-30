@@ -1,0 +1,35 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+body {
+	background: linear-gradient(90deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 10s ease infinite;
+	transform: translate3d(0, 0, 0);
+}
+ 
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+#canvas {
+    background:#f2f2f2b2;
+    border:1px solid #ccc;
+    box-shadow: inset 2px 2px 5px black, 2px 2px 5px black;
+    left:50%;
+    margin-left:550px;
+    margin-top:240px;
+    /* position:absolute; */
+    text-align:center;
+    top:50%;
+} 
