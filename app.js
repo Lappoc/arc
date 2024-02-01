@@ -569,18 +569,18 @@
          
          function drawScore() {
              textFont('34pt Arial');
-             text('ARKANOID',200,180);
+             text('ARKANOID',250,180);
              
              textFont('24pt Arial');
-             text('Score:',200,280);
-             text(score,300,280);
+             text('Score:',280,280);
+             text(score,400,280);
              
              
-             text('PRESS',80,380);
+             text('PRESS',160,380);
              textColor('#333');
-             text('F5',200,380);			
+             text('F5',280,380);			
              textColor('#999');
-             text('RESTART THE GAME',247,380);
+             text('RESTART THE GAME',330,380);
              
          }
      
