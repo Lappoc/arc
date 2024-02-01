@@ -27,13 +27,13 @@ body {
     border:1px solid #ccc;
     box-shadow: inset 2px 2px 5px black, 2px 2px 5px black;
     left:50%;
-    margin-left:550px;
-    margin-top:240px;
+    margin-left:30%;
+    margin-top:10%;
     text-align:center;
     top:50%;
 } 
 
 audio{
-    margin-left:780px;
-    margin-top:40px;
+    margin-left:42%;
+    margin-top:5%;
 }
