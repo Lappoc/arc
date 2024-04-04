@@ -1,13 +1,16 @@
-// function soundClick() {
-//     var audio = new Audio(); // Создаём новый элемент Audio
-//     audio.src = 'click.mp3'; // Указываем путь к звуку "клика"
-//     audio.autoplay = true; // Автоматически запускаем
-//   }
+var audio = document.getElementById("myAudio");
+  var currentSong = 0;
+  var songs = [
+    "starboy.mp3",
+    "take_ny_breath.mp3",
+    "I_Feel_It_Coming.mp3"
+  ];
 
-//   function play() {
-//     var audio = new Audio('starboy.mp3');
-//     audio.play();
-//   }
+  audio.addEventListener("ended", function() {
+    currentSong = (currentSong + 1) % songs.length;
+    audio.src = songs[currentSong];
+    audio.play();
+  });
      const ENGINE_DEBUG = true;
 	
      var canvas = null; 	  
@@ -119,6 +122,7 @@
      var KEY_D     = false;
      var	KEY_K 	  = false;
      var	KEY_M     = false;
+     var KEY_F5 = false;
      
      function hageMouseMove(event) {
          mouseX = event.clientX - canvas.offsetLeft;    
@@ -150,7 +154,8 @@
          if(KEY == 83) KEY_S  = true; 
          if(KEY == 75) KEY_K  = true;
          if(KEY == 77) KEY_M  = true;
-         if(KEY == 32) KEY_SPACE  = true;		
+         if(KEY == 32) KEY_SPACE  = true;
+         if(KEY == 116) KEY_F5 =true;		
          
          if(ENGINE_DEBUG) console.log(KEY);
      }
@@ -168,6 +173,7 @@
          KEY_K 	  = false;
          KEY_M     = false;
          KEY_SPACE = false;		
+         KEY_F5 = false;
      }
      
      function borderColor(color) {
@@ -564,23 +570,24 @@
          }
          
          function updateScore() {
-             // if(F5) RESTART THE GAME
+
+             if(KEY_F5) window.location.href = window.location.href
          }
          
          function drawScore() {
              textFont('34pt Arial');
-             text('ARKANOID',200,180);
+             text('ARKANOID',250,180);
              
              textFont('24pt Arial');
-             text('Score:',200,280);
-             text(score,300,280);
+             text('Score:',270,270);
+             text(score,395,270);
              
              
-             text('PRESS',80,380);
+             text('PRESS',130,380);
              textColor('#333');
-             text('F5',200,380);			
+             text('F5',250,380);			
              textColor('#999');
-             text('RESTART THE GAME',247,380);
+             text('RESTART THE GAME',297,380);
              
          }
      
