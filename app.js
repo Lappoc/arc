@@ -571,7 +571,30 @@ var audio = document.getElementById("myAudio");
          
          function updateScore() {
 
-             if(KEY_F5) window.location.href = window.location.href
+            if (KEY_F5) {
+        game_current_stage = menu_stage;
+        level = 1;
+        score = 0;
+        lives = 3;
+        speed = 5;
+        level_bricks1 = [
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+            [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+            [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+            [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+            [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+            [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+        ];
+        bricks_destroed = 0;
+        bricks_count = 0;
+        initGame()
+        update()
+        draw()
+    }
          }
          
          function drawScore() {
